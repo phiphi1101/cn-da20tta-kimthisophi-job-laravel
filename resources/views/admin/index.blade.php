@@ -26,7 +26,7 @@
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>A</b>LT</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg">BACKHOA_APTECH</span>
+      <span class="logo-lg">ITJob</span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -127,7 +127,7 @@
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="{{asset('assets')}}/images/user2-160x160.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs">Alexander Pierce</span>
+              <span class="hidden-xs">Kim Thị Sô Phi</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
@@ -135,7 +135,7 @@
                 <img src="{{asset('assets')}}/images/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                 <p>
-                  Alexander Pierce - Web Developer
+                  Kim Thị Sô Phi
                   <small>Member since Nov. 2012</small>
                 </p>
               </li>
