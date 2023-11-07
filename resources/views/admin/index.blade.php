@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Blank Page</title>
+  <title>Trang quản trị viên</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -26,7 +26,7 @@
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>A</b>LT</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg">ITJob</span>
+      <span class="logo-lg">Job24H</span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -54,7 +54,7 @@
                   <li><!-- start message -->
                     <a href="#">
                       <div class="pull-left">
-                        <img src="{{asset('assets')}}/images/user2-160x160.jpg" class="img-circle" alt="User Image">
+                        <img src="{{asset('assets')}}/images/admin.jpg" class="img-circle" alt="User Image">
                       </div>
                       <h4>
                         Support Team
@@ -126,33 +126,18 @@
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="{{asset('assets')}}/images/user2-160x160.jpg" class="user-image" alt="User Image">
+              <img src="{{asset('assets')}}/images/admin.jpg" class="user-image" alt="User Image">
               <span class="hidden-xs">Kim Thị Sô Phi</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="{{asset('assets')}}/images/user2-160x160.jpg" class="img-circle" alt="User Image">
+                <img src="{{asset('assets')}}/images/admin.jpg" class="img-circle" alt="User Image">
 
                 <p>
                   Kim Thị Sô Phi
-                  <small>Member since Nov. 2012</small>
+                  <small>Sinh viên ngành CNTT TVU</small>
                 </p>
-              </li>
-              <!-- Menu Body -->
-              <li class="user-body">
-                <div class="row">
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Followers</a>
-                  </div>
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Sales</a>
-                  </div>
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Friends</a>
-                  </div>
-                </div>
-                <!-- /.row -->
               </li>
               <!-- Menu Footer-->
               <li class="user-footer">
@@ -180,10 +165,10 @@
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="{{asset('assets')}}/images/user2-160x160.jpg" class="img-circle" alt="User Image">
+          <img src="{{asset('assets')}}/images/admin.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Alexander Pierce</p>
+          <p>Kim Thị Sô Phi</p>
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
@@ -205,9 +190,6 @@
         <li>
           <a href="menu.html">
             <i class="fa fa-th"></i> <span>Quản lý Menu </span>
-            <span class="pull-right-container">
-              <small class="label pull-right bg-green">FE</small>
-            </span>
           </a>
         </li>
 
@@ -245,8 +227,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Blank page
-        <small>it all starts here</small>
+        Trang chủ
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -291,7 +272,7 @@
     <div class="pull-right hidden-xs">
       <b>Version</b> 0.0.1
     </div>
-    <strong>Copyright &copy; 2018 <a href="https://adminlte.io">TTPM_BKAP</a>.</strong>
+    <strong>Copyright &copy; 2023 <a href="https://adminlte.io">kimthisophi1101@gmail.com</a>.</strong>
   </footer>
 
 </div>
