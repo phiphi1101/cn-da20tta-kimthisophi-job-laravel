@@ -17,10 +17,17 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+    protected $primaryKey = 'user_id';
+
     protected $fillable = [
-        'name',
-        'email',
+        'user_id',
+        'fullname',
         'password',
+        'avatar',
+        'email',
+        'phone',
+        'role',
+        'active',
     ];
 
     /**
@@ -40,6 +47,11 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
-        'password' => 'hashed',
+        'password'          => 'hashed',
     ];
+
+    public function companies()
+    {
+        return $this->belongsToMany('App\Models\Company', 'user_companies', 'user_id', 'company_id');
+    }
 }
