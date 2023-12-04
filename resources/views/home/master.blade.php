@@ -28,7 +28,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
         <div class="container-fluid px-md-4	">
-            <a class="navbar-brand" href="/">Skillhunt</a>
+            <a class="navbar-brand" href="/">Job24H</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="oi oi-menu"></span> Menu
             </button>
@@ -55,7 +55,7 @@
             <div class="row mb-5">
                 <div class="col-md">
                     <div class="ftco-footer-widget mb-4">
-                        <h2 class="ftco-heading-2">Skillhunt</h2>
+                        <h2 class="ftco-heading-2">Job24H</h2>
                         <p>Hãy kết nối các doanh nghiệp đang khao khát nguồn nhân lực chất lượng với các ứng cử viên sáng giá nhất. Đối với nhà tuyển dụng, chúng tôi tiến hành tiếp xúc, tìm hiểu nhu cầu tuyển dụng thực tế, tư vấn cho khách hàng phương pháp
                             tuyển dụng hiệu quả nhất.</p>
                         <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
@@ -80,9 +80,9 @@
                         <h2 class="ftco-heading-2">Bạn có câu hỏi?</h2>
                         <div class="block-23 mb-3">
                             <ul>
-                                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-                                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-                                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+                                <li><span class="icon icon-map-marker"></span><span class="text">126 Nguyễn Thiện Thành, Khóm 4, Phường 5, TP.Trà Vinh</span></li>
+                                <li><a href="#"><span class="icon icon-phone"></span><span class="text">0382533858</span></a></li>
+                                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">kimthisophi1101@gmail.com</span></a></li>
                             </ul>
                         </div>
                     </div>
@@ -90,7 +90,7 @@
             </div>
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <p>Copyright 2023</p>
+                    <p>Copyright kimthisophi2023</p>
                 </div>
             </div>
         </div>

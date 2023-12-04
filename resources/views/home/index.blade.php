@@ -232,13 +232,12 @@
             <div class="row d-flex justify-content-center">
                 <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
                     <h2>Đăng ký nhận bản tin của chúng tôi</h2>
-                    <p>Xa xa, đằng sau những ngọn núi chữ, xa những đất nước Vokalia và Consonantia, có những văn bản mù quáng. Họ sống tách biệt</p>
                     <div class="row d-flex justify-content-center mt-4 mb-4">
                         <div class="col-md-12">
                             <form action="#" class="subscribe-form">
                                 <div class="form-group d-flex">
-                                    <input type="text" class="form-control" placeholder="Enter email address">
-                                    <input type="submit" value="Subscribe" class="submit px-3">
+                                    <input type="text" class="form-control" placeholder="Địa chỉ Email">
+                                    <input type="submit" value="Gửi" class="submit px-3">
                                 </div>
                             </form>
                         </div>
