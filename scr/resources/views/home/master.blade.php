@@ -36,12 +36,13 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active"><a href="/" class="nav-link">Trang chủ</a></li>
                     <li class="nav-item"><a href="/find-job" class="nav-link">Tìm việc</a></li>
-                    <li class="nav-item"><a href="/contact" class="nav-link">Liên lạc</a></li>
+                    <li class="nav-item"><a href="/contact" class="nav-link">Liên hệ</a></li>
                     @if(Auth::check())
                     <li class="nav-item cta mr-md-1"><a href="#" class="nav-link">Xin chào, {{ Auth::user()->fullname }}</a></li>
                     @else
                     <li class="nav-item cta mr-md-1"><a href="/auth/registry" class="nav-link">Đăng ký</a></li>
                     <li class="nav-item cta cta-colored"><a href="/auth" class="nav-link">Đăng nhập</a></li>
+                    <li class="nav-item cta mr-md-1"><a href="/auth/logout" class="nav-link">Đăng xuất</a></li>
                     @endif
                 </ul>
             </div>
@@ -55,7 +56,7 @@
             <div class="row mb-5">
                 <div class="col-md">
                     <div class="ftco-footer-widget mb-4">
-                        <h2 class="ftco-heading-2">Job24H</h2>
+                        <h2 class="ftco-heading-2">Job24h</h2>
                         <p>Hãy kết nối các doanh nghiệp đang khao khát nguồn nhân lực chất lượng với các ứng cử viên sáng giá nhất. Đối với nhà tuyển dụng, chúng tôi tiến hành tiếp xúc, tìm hiểu nhu cầu tuyển dụng thực tế, tư vấn cho khách hàng phương pháp
                             tuyển dụng hiệu quả nhất.</p>
                         <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
@@ -67,7 +68,7 @@
                 </div>
                 <div class="col-md">
                     <div class="ftco-footer-widget mb-4">
-                        <h2 class="ftco-heading-2">Employers</h2>
+                        <h2 class="ftco-heading-2">Tuyển dụng </h2>
                         <ul class="list-unstyled">
                             @foreach($categories as $c)
                             <li><a href="#" class="pb-1 d-block">{{ $c->category_name }}</a></li>
@@ -80,8 +81,8 @@
                         <h2 class="ftco-heading-2">Bạn có câu hỏi?</h2>
                         <div class="block-23 mb-3">
                             <ul>
-                                <li><span class="icon icon-map-marker"></span><span class="text">126 Nguyễn Thiện Thành, Khóm 4, Phường 5, TP.Trà Vinh</span></li>
-                                <li><a href="#"><span class="icon icon-phone"></span><span class="text">0382533858</span></a></li>
+                                <li><span class="icon icon-map-marker"></span><span class="text">126 Nguyễn Thiện Thành, Khóm 4, Phường 5, Tp.Trà Vinh</span></li>
+                                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+84 382 533 858</span></a></li>
                                 <li><a href="#"><span class="icon icon-envelope"></span><span class="text">kimthisophi1101@gmail.com</span></a></li>
                             </ul>
                         </div>
@@ -90,7 +91,7 @@
             </div>
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <p>Copyright kimthisophi2023</p>
+                    <p>Copyright by kimthisophi-110120060-2023</p>
                 </div>
             </div>
         </div>

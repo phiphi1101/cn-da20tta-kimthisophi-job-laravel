@@ -24,20 +24,20 @@
     <div class="container">
         <div class="row d-flex mb-5 contact-info">
             <div class="col-md-12 mb-4">
-                <h2 class="h3">Thông tin liên hệ</h2>
+                <h2 class="h3">Liên hệ </h2>
             </div>
             <div class="w-100"></div>
             <div class="col-md-3">
-                <p><span>Địa chỉ:</span> 126 Nguyễn Thiện Thành, Khóm 4, Phường 5, TP.Trà Vinh</p>
+                <p><span>Địa chỉ:</span> 126 Nguyễn Thiện Thành, Khóm 4, Phường 5, Tp.Trà Vinh</p>
             </div>
             <div class="col-md-3">
-                <p><span>Điện thoại:</span> <a href="tel://1234567920">0382533858</a></p>
+                <p><span>Phone:</span> <a href="tel://1234567920">+84 382 533 858</a></p>
             </div>
             <div class="col-md-3">
-                <p><span>Email:</span> <a href="mailto:kimthisophi1101@gmail.com">kimthisophi1101@gmail.com</a></p>
+                <p><span>Email:</span> <a href="mailto:info@yoursite.com">kimthisophi1101@gmail.com</a></p>
             </div>
             <div class="col-md-3">
-                <p><span>Website</span> <a href="#">Job24H.com</a></p>
+                <p><span>Website</span> <a href="#">Job24h.com</a></p>
             </div>
         </div>
         <div class="row block-9">
