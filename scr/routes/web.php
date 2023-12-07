@@ -22,6 +22,9 @@ Route::post('/auth/login', [AuthController::class, 'login']);
 Route::get('/auth/registry', [AuthController::class, 'registry']);
 Route::post('/auth/registry', [AuthController::class, 'registrySave']);
 Route::get('/auth/logout', [AuthController::class, 'logout']);
+# Logout routes
+Route::get('/logout', [AuthController::class, 'index'])->name('logout');
+
 
 # Admin routes
 Route::prefix('admin')->middleware(['auth', 'auth-admin'])->controller(AdminController::class)->group(function () {
