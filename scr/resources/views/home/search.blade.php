@@ -49,14 +49,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md mr-md-2">
-                            <div class="form-group">
-                                <div class="form-field">
-                                    <div class="icon"><span class="icon-map-marker"></span></div>
-                                    <input type="text" class="form-control" name="location" placeholder="Trà Vinh" value="{{ $key['location'] }}">
-                                </div>
-                            </div>
-                        </div>
                         <div class="col-md">
                             <div class="form-group">
                                 <div class="form-field">

@@ -16,7 +16,8 @@ class Company extends Model
         'company_name',
         'logo',
         'company_information',
-    ]; 
+        'tax_code',
+    ];
 
     public function users()
     {

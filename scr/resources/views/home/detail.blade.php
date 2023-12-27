@@ -26,10 +26,10 @@
             <div class="col-md-12 bg-white">
                 <img width="100%" src="https://dxwd4tssreb4w.cloudfront.net/web/images/default_banner_0.svg" alt="" class="mt-4">
                 <div class="d-flex align-items-center my-4">
-                    <img class="shadow rounded" width="140" src="{{ $company->logo }}" alt="{{ $company->company_id }}">
+                    <img class="shadow rounded" width="140" src="{{ $job->company->logo }}" alt="{{ $job->company->company_id }}">
                     <div class="ml-3">
                         <h2>{{ $job->job_name }}</h2>
-                        <h6>{{ $company->company_name }}</h6>
+                        <h6>{{ $job->company->company_name }}</h6>
                     </div>
                 </div>
                 <hr>
@@ -143,7 +143,7 @@
                 <p class="text-dark">{!! $job->contact !!}</p>
                 <hr>
                 <h4 class="text-primary"><b>Về công ty</b></h4>
-                <p class="text-dark">{!! $company->company_information !!}</p>
+                <p class="text-dark">{!! $job->company->company_information !!}</p>
             </div>
             <div class="col-md-3"></div>
         </div>

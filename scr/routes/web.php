@@ -7,6 +7,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\JobController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 # Home routes
@@ -19,12 +20,14 @@ Route::get('/recruitment/{job}', [HomeController::class, 'recruitment'])->middle
 # Login routes
 Route::get('/auth', [AuthController::class, 'index'])->name('login');
 Route::post('/auth/login', [AuthController::class, 'login']);
+Route::get('/auth/registry-employer', [AuthController::class, 'registryEmployer']);
+Route::post('/auth/registry-employer', [AuthController::class, 'registryEmployerSave']);
 Route::get('/auth/registry', [AuthController::class, 'registry']);
 Route::post('/auth/registry', [AuthController::class, 'registrySave']);
 Route::get('/auth/logout', [AuthController::class, 'logout']);
+
 # Logout routes
 Route::get('/logout', [AuthController::class, 'index'])->name('logout');
-
 
 # Admin routes
 Route::prefix('admin')->middleware(['auth', 'auth-admin'])->controller(AdminController::class)->group(function () {
@@ -67,5 +70,11 @@ Route::prefix('admin')->middleware(['auth', 'auth-admin'])->controller(AdminCont
         Route::get('/', 'index');
         Route::post('/add', 'store');
         Route::post('/destroy', 'destroy');
+    });
+
+    # Admin > Category routes
+    Route::prefix('profile')->controller(ProfileController::class)->group(function () {
+        Route::get('/', 'index');
+        Route::post('/', 'save');
     });
 });

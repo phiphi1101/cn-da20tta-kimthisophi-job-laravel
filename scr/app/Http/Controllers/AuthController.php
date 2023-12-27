@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
+use App\Models\Company;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -60,9 +62,53 @@ class AuthController extends Controller
         return redirect('/auth');
     }
 
+    public function registryEmployer()
+    {
+        $categories = Category::orderBy('updated_at', 'desc')->get();
+
+        return view('home.registry-employer', [
+            'title'      => 'Đăng ký nhà tuyển dụng',
+            'categories' => $categories,
+        ]);
+    }
+
+    public function registryEmployerSave(Request $req)
+    {
+        if ($req['password'] == $req['re-password']) {
+            // Add image
+            if ($req->file('avatar')) {
+                $req['avatar_path'] = str_replace('public', '/storage', $req->file('avatar')->store('public/user'));
+            }
+            if ($req->file('logo')) {
+                $req['logo_path'] = str_replace('public', '/storage', $req->file('logo')->store('public/company'));
+            }
+
+            $company = Company::create([
+                'company_name'        => $req['company_name'],
+                'logo'                => $req['logo_path'],
+                'company_information' => $req['company_information'],
+                'tax_code'            => $req['tax_code'],
+            ]);
+
+            User::create([
+                'fullname'   => $req['fullname'],
+                'password'   => Hash::make($req['password']),
+                'avatar'     => $req['logo_path'],
+                'email'      => $req['email'],
+                'phone'      => $req['phone'],
+                'role'       => 'employer',
+                'company_id' => $company->company_id,
+            ]);
+            Alert::success('Thành công', 'Đăng ký tài khoản nhà tuyển dụng thành công');
+        } else {
+            Alert::warning('Thông báo', 'Mật khẩu không khớp');
+        }
+        return redirect()->back();
+    }
+
     public function logout()
     {
         Auth::logout();
-        return redirect('/');
+        return redirect('/auth');
     }
 }

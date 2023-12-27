@@ -27,7 +27,7 @@ class Job extends Model
         'age',
         'contact',
         'active',
-        'user_id',
+        'company_id',
     ];
 
     public function categories()
@@ -38,5 +38,10 @@ class Job extends Model
     public function recruitments()
     {
         return $this->belongsToMany('App\Models\User', 'recruitments', 'job_id', 'user_id');
+    }
+
+    public function company()
+    {
+        return $this->hasOne('App\Models\Company', 'company_id', 'company_id');
     }
 }

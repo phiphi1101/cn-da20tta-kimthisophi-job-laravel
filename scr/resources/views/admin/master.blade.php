@@ -85,29 +85,33 @@
 
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                        @if(Auth::user()->role == 'admin')
                         <li class="nav-item">
                             <a href="/admin/category" class="nav-link">
                                 <i class="nav-icon fas fa-th"></i>
                                 <p>Ngành nghề</p>
                             </a>
                         </li>
+                        @endif
                         <li class="nav-item">
                             <a href="/admin/job" class="nav-link">
                                 <i class="nav-icon fas fa-list"></i>
                                 <p>Công việc</p>
                             </a>
                         </li>
+                        @if(Auth::user()->role == 'admin')
                         <li class="nav-item">
                             <a href="/admin/company" class="nav-link">
                                 <i class="nav-icon fas fa-building"></i>
                                 <p>Công ty</p>
                             </a>
                         </li>
+                        @endif
                         @if(Auth::user()->role == 'employer')
                         <li class="nav-item">
-                            <a href="/admin/account" class="nav-link">
-                                <i class="nav-icon fas fa-user-circle"></i>
-                                <p>Tài khoản</p>
+                            <a href="/admin/profile" class="nav-link">
+                                <i class="nav-icon fas fa-building"></i>
+                                <p>Thông tin công ty</p>
                             </a>
                         </li>
                         @endif

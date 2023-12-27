@@ -28,6 +28,7 @@ class User extends Authenticatable
         'phone',
         'role',
         'active',
+        'company_id',
     ];
 
     /**
@@ -50,8 +51,8 @@ class User extends Authenticatable
         'password'          => 'hashed',
     ];
 
-    public function companies()
+    public function company()
     {
-        return $this->belongsToMany('App\Models\Company', 'user_companies', 'user_id', 'company_id');
+        return $this->hasOne('App\Models\Company', 'company_id', 'company_id');
     }
 }

@@ -42,8 +42,8 @@
                     <li class="nav-item cta mr-md-1"><a href="/auth/logout" class="nav-link">Đăng xuất</a></li>
                     @else
                     <li class="nav-item cta mr-md-1"><a href="/auth/registry" class="nav-link">Đăng ký</a></li>
+                    <li class="nav-item cta mr-md-1"><a href="/auth/registry-employer" class="nav-link">Đăng ký Nhà tuyển dụng</a></li>
                     <li class="nav-item cta cta-colored"><a href="/auth" class="nav-link">Đăng nhập</a></li>
-
                     @endif
                 </ul>
             </div>

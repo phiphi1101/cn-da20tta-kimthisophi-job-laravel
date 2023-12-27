@@ -9,49 +9,6 @@
                 <div class="text text-center pt-5 mt-md-5">
                     <p class="mb-4">Tìm việc làm, việc làm và cơ hội nghề nghiệp</p>
                     <h1 class="mb-5">Cách dễ nhất để có được công việc mới của bạn</h1>
-                    <div class="ftco-counter ftco-no-pt ftco-no-pb">
-                        <div class="row">
-                            <div class="col-md-4 d-flex justify-content-center counter-wrap ftco-animate">
-                                <div class="block-18">
-                                    <div class="text d-flex">
-                                        <div class="icon mr-2">
-                                            <span class="flaticon-worldwide"></span>
-                                        </div>
-                                        <div class="desc text-left">
-                                            <strong class="number" data-number="46">0</strong>
-                                            <span>Countries</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 d-flex justify-content-center counter-wrap ftco-animate">
-                                <div class="block-18 text-center">
-                                    <div class="text d-flex">
-                                        <div class="icon mr-2">
-                                            <span class="flaticon-visitor"></span>
-                                        </div>
-                                        <div class="desc text-left">
-                                            <strong class="number" data-number="450">{{ count($companies) }}</strong>
-                                            <span>Công ty</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 d-flex justify-content-center counter-wrap ftco-animate">
-                                <div class="block-18 text-center">
-                                    <div class="text d-flex">
-                                        <div class="icon mr-2">
-                                            <span class="flaticon-resume"></span>
-                                        </div>
-                                        <div class="desc text-left">
-                                            <strong class="number" data-number="80000">0</strong>
-                                            <span>Active Employees</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="ftco-search my-md-5">
                         <div class="row">
                             <div class="col-md-12 nav-link-wrap">
@@ -64,34 +21,11 @@
                                     <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-nextgen-tab">
                                         <form action="/find-job" class="search-job">
                                             <div class="row no-gutters">
-                                                <div class="col-md mr-md-2">
+                                                <div class="col-md-9 mr-md-2">
                                                     <div class="form-group">
                                                         <div class="form-field">
                                                             <div class="icon"><span class="icon-briefcase"></span></div>
                                                             <input type="text" class="form-control" name="name" placeholder="Lập trình viên, Nhân viên văn phòng">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md mr-md-2">
-                                                    <div class="form-group">
-                                                        <div class="form-field">
-                                                            <div class="select-wrap">
-                                                                <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                                                                <select name="cat" class="form-control">
-                                                                    <option value="">--- Ngành nghề ---</option>
-                                                                    @foreach($categories as $c)
-                                                                    <option value="{{ $c->category_id }}">{{ $c->category_name }}</option>
-                                                                    @endforeach
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md mr-md-2">
-                                                    <div class="form-group">
-                                                        <div class="form-field">
-                                                            <div class="icon"><span class="icon-map-marker"></span></div>
-                                                            <input type="text" class="form-control" name="location" placeholder="Trà Vinh">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -119,8 +53,7 @@
     <div class="container">
         <div class="row justify-content-center mb-5">
             <div class="col-md-7 heading-section text-center ftco-animate">
-                <span class="subheading">Ngành nghề</span>
-                <h2 class="mb-0">Top ngành nghề</h2>
+                <h2 class="mb-0">Ngành nghề</h2>
             </div>
         </div>
         <div class="row">
@@ -128,9 +61,7 @@
             <div class="col-md-3 ftco-animate">
                 <ul class="category text-center">
                     <li>
-                        <a href="#">{{ $c->category_name }}<br>
-                            <span class="number">{{ count($c->jobs) }}</span>
-                            <span>Công việc</span>
+                        <a href="find-job?cat={{ $c->category_id }}">{{ $c->category_name }}<br>
                             <i class="ion-ios-arrow-forward"></i>
                         </a>
                     </li>
@@ -232,7 +163,7 @@
             <div class="row d-flex justify-content-center">
                 <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
                     <h2>Đăng ký nhận bản tin của chúng tôi</h2>
-                    <p></p>
+                    <p>Xa xa, đằng sau những ngọn núi chữ, xa những đất nước Vokalia và Consonantia, có những văn bản mù quáng. Họ sống tách biệt</p>
                     <div class="row d-flex justify-content-center mt-4 mb-4">
                         <div class="col-md-12">
                             <form action="#" class="subscribe-form">

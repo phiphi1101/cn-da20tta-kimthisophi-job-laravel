@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('company_name');
             $table->string('logo');
             $table->text('company_information');
+            $table->string('tax_code');
             $table->timestamps();
         });
     }

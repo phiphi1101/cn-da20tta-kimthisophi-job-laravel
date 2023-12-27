@@ -14,7 +14,7 @@ class JobController extends Controller
     {
         $jobs = Job::where('job_name', 'like', '%' . $req['q'] . '%')
             ->when(Auth::user()->role == 'employer', function ($q) {
-                $q->where('user_id', Auth::user()->user_id);
+                $q->where('company_id', Auth::user()->company_id);
             })
             ->orderBy('updated_at', 'desc')
             ->get();
@@ -46,7 +46,7 @@ class JobController extends Controller
             }
         }
 
-        $req['user_id'] = Auth::user()->user_id;
+        $req['company_id'] = Auth::user()->company_id;
         $job = Job::create($req->input());
         $job->categories()->attach($req['categories']);
         Alert::success('Công việc', 'Thêm thành công');
@@ -83,7 +83,7 @@ class JobController extends Controller
         }
 
         $req['active'] = false;
-        $req['user_id'] = Auth::user()->user_id;
+        $req['company_id'] = Auth::user()->company_id;
         $job->update($req->input());
         $job->categories()->sync($req['categories']);
         Alert::success('Công việc', 'Chỉnh sửa thành công');
