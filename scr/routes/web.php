@@ -67,8 +67,7 @@ Route::prefix('admin')->middleware(['auth', 'auth-admin'])->controller(AdminCont
 
     # Admin > Account routes
     Route::prefix('account')->controller(AccountController::class)->group(function () {
-        Route::get('/', 'index');
-        Route::post('/add', 'store');
+        Route::get('/{accountType}', 'index');
         Route::post('/destroy', 'destroy');
     });
 

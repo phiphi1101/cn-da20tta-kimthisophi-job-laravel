@@ -107,6 +107,22 @@
                             </a>
                         </li>
                         @endif
+                        @if(Auth::user()->role == 'admin')
+                        <li class="nav-item">
+                            <a href="/admin/account/employer" class="nav-link">
+                                <i class="nav-icon fas fa-user-tie"></i>
+                                <p>Nhà tuyển dụng</p>
+                            </a>
+                        </li>
+                        @endif
+                        @if(Auth::user()->role == 'admin')
+                        <li class="nav-item">
+                            <a href="/admin/account/user" class="nav-link">
+                                <i class="nav-icon fas fa-users-cog"></i>
+                                <p>Người tìm việc</p>
+                            </a>
+                        </li>
+                        @endif
                         @if(Auth::user()->role == 'employer')
                         <li class="nav-item">
                             <a href="/admin/profile" class="nav-link">

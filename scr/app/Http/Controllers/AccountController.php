@@ -2,23 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Company;
 use App\Models\User;
 use App\Models\UserCompany;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class AccountController extends Controller
 {
-    public function index(Request $req)
+    public function index(Request $req, $accountType)
     {
-        $companyID = UserCompany::where('user_id', Auth::user()->user_id)->pluck('company_id')[0];
-        $company = Company::where('company_id', $companyID)->first();
+        $users = User::where('role', $accountType)->orderBy('updated_at', 'desc')->get();
 
         return view('admin.account.index', [
-            'title'   => 'Tài khoản thành viên',
-            'company' => $company,
+            'title'       => $accountType == 'employer' ? 'Nhà tuyển dụng' : 'Người tìm việc',
+            'users'       => $users,
+            'accountType' => $accountType,
         ]);
     }
 
@@ -39,10 +37,7 @@ class AccountController extends Controller
 
     public function destroy(Request $req)
     {
-        $companyID = explode('-', $req['id'])[0];
-        $userID = explode('-', $req['id'])[1];
-
-        UserCompany::where('company_id', $companyID)->where('user_id', $userID)->delete();
+        User::where('user_id', $req['id'])->delete();
         Alert::success('Tài khoản', 'Xoá thành công');
         return redirect()->back();
     }

@@ -5,13 +5,13 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1>Tài khoản thành viên</h1>
+                <h1>{{ $accountType == 'employer' ? 'Nhà tuyển dụng' : 'Người tìm việc' }}</h1>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="/admin"><i class="fas fa-home"></i></a></li>
-                    <li class="breadcrumb-item"><a href="/admin/account">Tài khoản</a></li>
-                    <li class="breadcrumb-item active">Tài khoản thành viên</li>
+                    <li class="breadcrumb-item">Tài khoản</li>
+                    <li class="breadcrumb-item active">{{ $accountType == 'employer' ? 'Nhà tuyển dụng' : 'Người tìm việc' }}</li>
                 </ol>
             </div>
         </div>
@@ -20,19 +20,6 @@
 
 <section class="content">
     <div class="container-fluid">
-        <div class="card">
-            <div class="card-body">
-                <form action="/admin/account/add" class="input-group" method="POST">
-                    <input type="email" class="form-control" name="email" placeholder="yourmail@gmail.com">
-                    <input type="hidden" class="form-control" name="company_id" value="{{ $company->company_id }}">
-                    <div class="input-group-append">
-                        <button class="btn btn-primary">Thêm thành viên</button>
-                    </div>
-                    @csrf
-                </form>
-            </div>
-        </div>
-
         <div class="card">
             <div class="card-body">
                 <table class="table table-striped">
@@ -47,7 +34,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($company->users as $u)
+                        @foreach($users as $u)
                         <tr>
                             <td>{{ $u->user_id }}</td>
                             <td>{{ $u->fullname }}</td>
@@ -59,7 +46,7 @@
                             <td>{{ $u->email }}</td>
                             <td>{{ $u->phone }}</td>
                             <td>
-                                <div onclick="removeRow('/admin/account/destroy', '{{$company->company_id}}-{{ $u->user_id }}')" class="btn btn-danger rounded-circle"><i class="fas fa-trash-alt"></i></div>
+                                <div onclick="removeRow('/admin/account/destroy', '{{ $u->user_id }}')" class="btn btn-danger rounded-circle"><i class="fas fa-trash-alt"></i></div>
                             </td>
                         </tr>
                         @endforeach
