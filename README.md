@@ -1,66 +1,72 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Thực tập đồ án chuyên ngành 
+# KIM THỊ SÔ PHI - 110120060
+# job_laravel
+![gd_chinh](https://github.com/phiphi1101/cn-da20tta-kimthisophi-job-laravel/assets/116547777/baba08e0-bf34-4100-b525-7b21f54a9df1)
+
+
+
+[![Open in Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/microsoft/Web-Dev-For-Beginners)
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  
+<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-## About Laravel
+## Thông tin dự án
+#### Mô hình dữ liệu mức quan niệm
+![erd](https://github.com/phiphi1101/cn-da20tta-kimthisophi-job-laravel/assets/116547777/2c1409e9-0ad2-41db-98ba-e997b1a2227d)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+#### Biểu đồ Use Case tổng quát (Admin)
+![1 drawio](https://github.com/phiphi1101/cn-da20tta-kimthisophi-job-laravel/assets/116547777/6f9d0c0c-e9f0-493a-a3b3-737f62d10996)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+#### Giao diện trang liên hệ
+  ![gd_lh](https://github.com/phiphi1101/cn-da20tta-kimthisophi-job-laravel/assets/116547777/5825a73f-db15-4275-a3fc-5b0f1da8e3a3)
 
-## Learning Laravel
+#### Giao diện quản trị:
+![qtri](https://github.com/phiphi1101/cn-da20tta-kimthisophi-job-laravel/assets/116547777/648f3dbc-fe3a-4efa-9b13-37ea0efa0fe4)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+#### Giao diện người tìm việc
+![gd_chinh](https://github.com/phiphi1101/cn-da20tta-kimthisophi-job-laravel/assets/116547777/96d6972f-108e-4137-bec7-8b116b16ba93)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+#### Giao diện nhà tuyển dụng
+![ntd](https://github.com/phiphi1101/cn-da20tta-kimthisophi-job-laravel/assets/116547777/42ece2a8-9370-45a2-9c49-b70ff0df6cf8)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+## Cách cài đặt 
+  - Cài đặt PHP phiên bản 7.3 trở lên và Composer
+  - Tải dự án từ github
 
-## Contributing
+          git clone https://github.com/phiphi1101/cn-da20tta-kimthisophi-job-laravel.git
+  - Cài đặt phần còn thiếu của dự án
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+          composer install
+          composer update
 
-## Code of Conduct
+  - Chạy dự án
+    - Chạy lệnh sau để xóa symbolic link cũ trong thư mục public của Laravel 
+   
+           Remove-Item -Recurse -Force public\storage
+    - Chạy lệnh sau để tạo ra một symbolic link mới trong thư mục public của Laravel
+   
+           php artisan storage:link
+    - Chạy lệnh sau để tạo các bảng cơ sở dữ liệu
+   
+          php artisan migrate:fresh --seed
+    - Chạy dự án laravel
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+          php artisan serve
+    - Truy cập vào địa chỉ localhost vừa xuất hiện
+   
+          http://127.0.0.1:8000/
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Thông tin liên hệ tác giả
+  - Họ tên: Kim Thị Sô Phi
+  - SĐT: 0382533858
+  - Email:kimthisophi1101@gmail.com
