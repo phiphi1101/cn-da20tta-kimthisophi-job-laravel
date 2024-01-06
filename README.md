@@ -43,7 +43,7 @@
   - Cài đặt PHP phiên bản 7.3 trở lên và Composer
   - Tải dự án từ github
 
-          git clone https://github.com/NgoTanLoi01/cn-da20tta-ngotanloi-ITshop-laravel.git
+          git clone https://github.com/phiphi1101/cn-da20tta-kimthisophi-job-laravel.git
   - Cài đặt phần còn thiếu của dự án
 
           composer install
@@ -67,6 +67,6 @@
           http://127.0.0.1:8000/
 
 ## Thông tin liên hệ tác giả
-  - Họ tên: Ngô Tấn Lợi
-  - SĐT: 0337120073
-  - Email: ngotanloi2424@gmail.com
+  - Họ tên: Kim Thị Sô Phi
+  - SĐT: 0382533858
+  - Email:kimthisophi1101@gmail.com
