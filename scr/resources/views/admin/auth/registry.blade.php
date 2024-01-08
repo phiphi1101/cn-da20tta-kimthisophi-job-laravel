@@ -17,59 +17,128 @@
 </head>
 
 <body class="hold-transition login-page">
-    <div class="login-box">
+    <div class="login-box" style="width: 800px;">
         <!-- /.login-logo -->
         <div class="card card-outline card-primary">
             <div class="card-header text-center">
-                <a href="/" class="h1"><b>Đăng ký</b></a>
+                <a href="/" class="h1"><b>Đăng ký NTV</b></a>
             </div>
             <div class="card-body">
                 <form action="/auth/registry" method="POST" enctype="multipart/form-data">
-                    <div class="input-group mb-3">
-                        <input type="email" class="form-control" name="email" placeholder="Địa chỉ email" required>
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-envelope"></span>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h5><b class="text-success">1. Thông tin cá nhân</b></h5>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Họ tên</label>
+                                <input type="text" name="fullname" class="form-control" placeholder="Họ tên">
                             </div>
                         </div>
-                    </div>
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" name="fullname" placeholder="Họ tên" required>
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-question"></span>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>Giới tính</label>
+                                <select name="gender" class="form-control" placeholder="Giới tính">
+                                    <option value="male">Nam</option>
+                                    <option value="female">Nữ</option>
+                                </select>
                             </div>
                         </div>
-                    </div>
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" name="phone" placeholder="Số điện thoại" required>
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-phone"></span>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>Ngày sinh</label>
+                                <input type="date" name="birthday" class="form-control">
                             </div>
                         </div>
-                    </div>
-                    <div class="input-group mb-3">
-                        <input type="file" class="form-control" name="avatar" required>
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-image"></span>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Ảnh đại diện</label>
+                                <input type="file" name="avatar" class="form-control">
                             </div>
                         </div>
-                    </div>
-                    <div class="input-group mb-3">
-                        <input type="password" class="form-control" name="password" placeholder="Mật khẩu" required>
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-lock"></span>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" name="email" class="form-control">
                             </div>
                         </div>
-                    </div>
-                    <div class="input-group mb-3">
-                        <input type="password" class="form-control" name="re-password" placeholder="Nhập lại mật khẩu" required>
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-lock"></span>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Số điện thoại</label>
+                                <input type="text" name="phone" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Mật khẩu</label>
+                                <input type="password" name="password" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Nhập lại mật khẩu</label>
+                                <input type="password" name="re-password" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <h5><b class="text-success">2. Trình độ</b></h5>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Trình độ</label>
+                                @php
+                                $academicList = ['Không yêu cầu', 'Đại học', 'Cao đẳng', 'Trung cấp', '12/12', '9/12'];
+                                @endphp
+                                <select class="form-control select2" name="academic_level">
+                                    @foreach($academicList as $t)
+                                    <option value="{{ $t }}">{{ $t }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Trình độ ngoại ngữ</label>
+                                <input type="text" name="english_level" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Trình độ tin học</label>
+                                <input type="text" name="it_level" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Bằng cấp</label>
+                                <input type="file" name="degree_path" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <h5><b class="text-success">3. Công việc hiện tại</b></h5>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Mô tả công việc hiện tại</label>
+                                <input type="text" name="current_job_description" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Kỹ năng công việc hiện tại</label>
+                                <input type="text" name="current_job_skills" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Vị trí công việc hiện tại</label>
+                                <input type="text" name="current_job_potision" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Mức lương mong muốn</label>
+                                <input type="number" name="salary" class="form-control">
                             </div>
                         </div>
                     </div>

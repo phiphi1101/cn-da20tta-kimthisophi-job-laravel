@@ -22,6 +22,16 @@
 
 <section class="ftco-section contact-section bg-light">
     <div class="container">
+        <!-- Thêm phần Google Map Embed -->
+        <div class="row mb-5">
+            <div class="col-md-12">
+                <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.126136735588!2d106.3465193!3d9.9234516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0175ea296facb%3A0x55ded92e29068221!2zVHLGsOG7nW5nIMSQ4bqhaSBI4buNYyBUcsOgIFZpbmg!5e0!3m2!1svi!2s!4v1704723012660!5m2!1svi!2s"
+        width="1100" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+
         <div class="row d-flex mb-5 contact-info">
             <div class="col-md-12 mb-4">
                 <h2 class="h3">Liên hệ </h2>

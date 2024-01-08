@@ -41,7 +41,7 @@
                     <li class="nav-item cta mr-md-1"><a href="#" class="nav-link">Xin chào, {{ Auth::user()->fullname }}</a></li>
                     <li class="nav-item cta mr-md-1"><a href="/auth/logout" class="nav-link">Đăng xuất</a></li>
                     @else
-                    <li class="nav-item cta mr-md-1"><a href="/auth/registry" class="nav-link">Đăng ký</a></li>
+                    <li class="nav-item cta mr-md-1"><a href="/auth/registry" class="nav-link">Đăng ký ứng viên </a></li>
                     <li class="nav-item cta mr-md-1"><a href="/auth/registry-employer" class="nav-link">Đăng ký Nhà tuyển dụng</a></li>
                     <li class="nav-item cta cta-colored"><a href="/auth" class="nav-link">Đăng nhập</a></li>
                     @endif

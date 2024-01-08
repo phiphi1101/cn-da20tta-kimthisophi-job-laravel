@@ -62,7 +62,7 @@ class HomeController extends Controller
 
     public function recruitment(Job $job, Request $req)
     {
-        $model = Recruitment::firstOrCreate(['job_id' => $job->job_id, 'user_id' => Auth::user()->user_id], [
+        $model = Recruitment::firstOrCreate(['job_id' => $job->job_id, 'user_id' => Auth::user()->cv_id], [
             'job_id'  => $job->job_id,
             'user_id' => Auth::user()->user_id,
         ]);
