@@ -52,7 +52,8 @@ Route::prefix('admin')->middleware(['auth', 'auth-admin'])->controller(AdminCont
         Route::get('/accept/{job}', 'accept');
         Route::post('/edit/{job}', 'update');
         Route::post('/destroy', 'destroy');
-        Route::get('/recruitment/{job}', 'recruitment');
+        Route::get('/recruitment/{user_id}', 'recruitment');
+
     });
 
     # Admin > Company routes
@@ -76,4 +77,7 @@ Route::prefix('admin')->middleware(['auth', 'auth-admin'])->controller(AdminCont
         Route::get('/', 'index');
         Route::post('/', 'save');
     });
+    # Admin > Statistics
+    Route::get('/admin/statistics', [AdminController::class, 'statistics'])->name('admin.statistics');
+
 });

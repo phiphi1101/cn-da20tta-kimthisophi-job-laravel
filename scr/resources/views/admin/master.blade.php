@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ $title }}</title>
+    {{-- <title>{{ $title }}</title> --}}
     <link rel="icon" href="/favicon.png">
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -128,6 +128,14 @@
                             <a href="/admin/profile" class="nav-link">
                                 <i class="nav-icon fas fa-building"></i>
                                 <p>Thông tin công ty</p>
+                            </a>
+                        </li>
+                        @endif
+                        @if(Auth::user()->role == 'admin')
+                        <li class="nav-item">
+                            <a href="{{Route('admin.statistics')}}" class="nav-link">
+                                <i class="nav-icon fas fa-chart-bar"></i>
+                                <p>Thống kê</p>
                             </a>
                         </li>
                         @endif

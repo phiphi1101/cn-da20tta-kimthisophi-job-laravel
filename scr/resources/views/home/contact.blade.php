@@ -50,7 +50,7 @@
                 <p><span>Website</span> <a href="#">Job24h.com</a></p>
             </div>
         </div>
-        <div class="row block-9">
+        {{-- <div class="row block-9">
             <div class="col-md-12 order-md-last d-flex">
                 <form action="#" class="bg-white p-5 contact-form">
                     <div class="form-group">
@@ -70,7 +70,7 @@
                     </div>
                 </form>
             </div>
-        </div>
+        </div> --}}
     </div>
 </section>
 @endsection

@@ -13,4 +13,5 @@ class Recruitment extends Model
         'job_id',
         'user_id',
     ];
+
 }

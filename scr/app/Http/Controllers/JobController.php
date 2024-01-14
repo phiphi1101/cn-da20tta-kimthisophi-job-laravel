@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Job;
+use App\Models\cv;
+use App\Models\Recruitment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -105,11 +107,30 @@ class JobController extends Controller
         return redirect()->back();
     }
 
-    public function recruitment(Job $job)
+    // public function recruitment(Job $job, Request $req)
+    //     {
+
+    //         $cv= cv::where('user_id', $user_id)->first();
+    //         return view('admin.job.recruitment', compact('cv'));
+    //     }
+    public function recruitment($job_id)
     {
-        return view('admin.job.recruitment', [
-            'title' => 'Ứng viên: ' . $job->job_name,
-            'job'   => $job,
-        ]);
+        // Lấy các user_ids đã nộp đơn cho công việc cụ thể
+        $userIds = Recruitment::where('job_id', $job_id)->pluck('user_id');
+
+        // Lấy thông tin CV cho các user_ids đã lấy được
+        $cvs = cv::whereIn('user_id', $userIds)->get();
+
+        return view('admin.job.recruitment', compact('cvs'));
     }
 }
+        // return view('admin.job.recruitment', [
+        //                 'title' => 'Ứng viên: ' . $job->job_name,
+        //                 'job'   => $job,
+        //         ]);
+
+
+ // $cv = cv::where('user_id', Auth::user()->user_id)->first();
+        // if (!$cv) {
+        //     return abort(404, 'CV not found');
+        // }

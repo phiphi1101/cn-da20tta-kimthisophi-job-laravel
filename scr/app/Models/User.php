@@ -55,4 +55,8 @@ class User extends Authenticatable
     {
         return $this->hasOne('App\Models\Company', 'company_id', 'company_id');
     }
+    public function cv()
+    {
+        return $this->hasOne('App\Models\cv', 'user_id');
+    }
 }

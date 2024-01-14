@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Company;
 use App\Models\Job;
+use App\Models\cv;
 use App\Models\Recruitment;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -62,7 +63,7 @@ class HomeController extends Controller
 
     public function recruitment(Job $job, Request $req)
     {
-        $model = Recruitment::firstOrCreate(['job_id' => $job->job_id, 'user_id' => Auth::user()->cv_id], [
+        $model = Recruitment::firstOrCreate(['job_id' => $job->job_id, 'user_id' => Auth::user()->user_id], [
             'job_id'  => $job->job_id,
             'user_id' => Auth::user()->user_id,
         ]);

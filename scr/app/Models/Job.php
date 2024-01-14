@@ -37,7 +37,7 @@ class Job extends Model
 
     public function recruitments()
     {
-        return $this->belongsToMany('App\Models\User', 'recruitments', 'job_id', 'user_id');
+        return $this->belongsToMany('App\Models\User', 'recruitments', 'job_id', 'user_id','cv_id');
     }
 
     public function company()

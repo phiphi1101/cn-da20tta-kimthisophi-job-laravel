@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\cv;
 use App\Models\Company;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -57,7 +58,81 @@ class AuthController extends Controller
         if ($req->file('avatar')) {
             $req['avatar'] = str_replace('public', '/storage', $req->file('avatar')->store('public/user'));
         }
-        User::create($req->input());
+        $newUser = User::create($req->input());
+        $newUserId = $newUser->user_id;
+
+// lưu vào cv
+    try {
+        $validateData = $req->validate([
+            'fullname' => 'required',
+            'gender' => 'required',
+            'birthday' => 'required|date',
+            'avatar' => 'required',
+            'email' => 'required|email',
+            'phone' => 'required',
+            'academic_level' => 'required',
+            'current_job_description' => 'required',
+            'current_job_skills' => 'required',
+            'current_job_potision' => 'required',
+            'salary' => 'required',
+            'english_level' => 'required',
+            'it_level' => 'required',
+            'degree_path' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+
+        ]);
+
+        $cvre = new Cv;
+
+        // Gán dữ liệu đã được kiểm tra vào đối tượng Cv
+        $cvre->fullname = $validateData['fullname'];
+        $cvre->gender = $validateData['gender'];
+        $cvre->birthday = $validateData['birthday'];
+        //$cvre->avatar = $validateData['avatar'];
+        // if ($req->hasFile('avatar')) {
+        //     $image = $req->file('avatar');
+
+        //     // Tạo tên mới để tránh trùng lặp
+        //     $imageName = time() . '_' . $image->getClientOriginalName();
+
+        //     // Lưu hình ảnh vào thư mục public/images (hoặc bạn có thể chọn thư mục khác)
+        //     $image->storeAs('public/storage/user', $imageName);
+
+        //     // Lưu tên tệp vào cơ sở dữ liệu
+        //     $cvre->avatar = $imageName;
+        // }
+       // Lưu avatar
+    if ($req->hasFile('avatar')) {
+        $avatarImage = $req->file('avatar');
+        $avatarImagePath = $avatarImage->store('public/user');
+        $cvre->avatar = str_replace('public', '/storage', $avatarImagePath);
+    }
+        $cvre->email = $validateData['email'];
+        $cvre->phone = $validateData['phone'];
+        $cvre->academic_level = $validateData['academic_level'];
+        $cvre->current_job_description = $validateData['current_job_description'];
+        $cvre->current_job_skills = $validateData['current_job_skills'];
+        $cvre->current_job_potision = $validateData['current_job_potision'];
+        $cvre->salary = $validateData['salary'];
+        $cvre->english_level = $validateData['english_level'];
+        $cvre->it_level = $validateData['it_level'];
+
+         // Lưu degree_path
+    if ($req->hasFile('degree_path')) {
+        $degreeImage = $req->file('degree_path');
+        $degreeImagePath = $degreeImage->store('public/user');
+        $cvre->degree_path = str_replace('public', '/storage', $degreeImagePath);
+    }
+
+        $cvre->user_id = $newUserId;
+        //dd($cvre);
+        // Lưu đối tượng Cv vào cơ sở dữ liệu
+        $cvre->save();
+       // dd("This should be printed.");
+    } catch (\Exception $e) {
+            dd($e->getMessage());
+    }
+
+
         Alert::success('Tài khoản', 'Đăng ký tài khoản thành công');
         return redirect('/auth');
     }
@@ -99,6 +174,10 @@ class AuthController extends Controller
                 'role'       => 'employer',
                 'company_id' => $company->company_id,
             ]);
+
+
+
+
             Alert::success('Thành công', 'Đăng ký tài khoản nhà tuyển dụng thành công');
         } else {
             Alert::warning('Thông báo', 'Mật khẩu không khớp');
