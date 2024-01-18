@@ -27,12 +27,30 @@ class AuthController extends Controller
             if (Hash::check($req['password'], $user->password)) {
                 Auth::login($user);
                 Alert::success('Đăng nhập', 'Đăng nhập thành công');
-                return redirect('/admin/category');
+                return redirect('/admin/job');
             }
         }
         Alert::warning('Đăng nhập', 'Tên đăng nhập hoặc mật khẩu không hợp lệ');
         return redirect()->back();
     }
+            protected function redirectTo()
+            {
+                // Kiểm tra nếu người dùng đã đăng nhập, chuyển hướng về trang dashboard hoặc trang chính
+                if (Auth::check()) {
+                    return redirect('/contact'); // Chuyển hướng về trang thống kê admin hoặc trang dashboard của bạn
+                }
+
+                // Lấy đường dẫn trang mà người dùng đã truy cập trước khi đăng nhập
+                $previousUrl = url()->previous();
+
+                // Kiểm tra xem nếu đường dẫn trước đó là đường dẫn đăng ký hoặc đăng nhập, thì chuyển hướng về trang mặc định
+                if (in_array($previousUrl, [redirect('/auth/registry'), redirect('/auth')])) {
+                    return $previousUrl; // Chuyển hướng về trang chính của bạn
+                }
+
+                // Ngược lại, chuyển hướng về đường dẫn trước đó
+                return $previousUrl;
+            }
 
     public function registry()
     {

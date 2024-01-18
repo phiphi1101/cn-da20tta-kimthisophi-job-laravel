@@ -21,7 +21,7 @@
         <!-- /.login-logo -->
         <div class="card card-outline card-primary">
             <div class="card-header text-center">
-                <a href="/" class="h1"><b>Đăng ký NTV</b></a>
+                <a href="/" class="h1"><b>Đăng ký hồ sơ tìm việc</b></a>
             </div>
             <div class="card-body">
                 <form action="/auth/registry" method="POST" enctype="multipart/form-data">
